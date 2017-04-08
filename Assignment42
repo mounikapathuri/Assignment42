@@ -1,0 +1,56 @@
+package Assignment42;
+
+public class Assignment42 {
+
+	public static void main(String[] args) {
+				shirt s1=new shirt();
+				s1.display();
+				shirt s2=new shirt(12,6);
+				System.out.printf("Collar size: "+s2.getcollarSize());
+				System.out.printf(" Sleeve size "+s2.getsleeveSize());
+				System.out.println(" material "+s2.getmaterial());
+				shirt s3=new shirt(18,9);
+				System.out.printf("Collar size "+s3.getcollarSize());
+				System.out.printf(" Sleeve size "+s3.getsleeveSize());
+				System.out.println(" material "+s3.getmaterial());
+			}
+
+		}
+		class shirt{
+			private int collarSize;
+			private int sleeveSize;
+			private String material;
+			shirt(){
+				collarSize=12;
+				sleeveSize=4;
+				material="cotton";	
+			}
+			shirt(int cs,int ss){
+				collarSize=cs;
+				sleeveSize=ss;
+				material="Cotton";
+			}
+			public void setcollarSize(int collarSize){
+				this.collarSize=collarSize;
+			}
+			public void setsleeveSize(int sleeveSize){
+				this.sleeveSize= sleeveSize;
+			}
+			public void setmaterial(String material){
+				this.material= material;
+			}
+			public int getcollarSize(){
+				return collarSize;
+			}
+			public int getsleeveSize(){
+				return sleeveSize;
+			}
+			public String getmaterial(){
+				return material;
+			}
+		public void display(){
+				
+				System.out.println("Collar size :"+getcollarSize()+" "+"Sleeve size: "+getsleeveSize()+" "+"material: "+getmaterial());
+			}
+			
+		}
